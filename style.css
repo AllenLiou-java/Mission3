@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 全域設定box-sizing */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 主要內容 */
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+/* 主要內容 - header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 20px;
+    margin-bottom: 24px;
+}
+
+.nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-bar li{
+    padding: 10px;
+    background-color: #3aaaf4;
+}
+
+.nav-bar a{
+    color: white;
+    font-weight: bold;
+}
+
+.nav-bar li:hover{
+    background-color: orange;
+}
+
+@media(max-width: 768px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header img{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+    .nav-bar li{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .nav-bar li a{
+        display: block;
+        text-align: center;
+    }
+}
+
+/* 主要內容 - main */
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    border: 2px solid #000;
+    padding: 10px;
+    width: 75%;
+}
+
+.content h2{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0px 0px 24px;
+}
+
+.content p{
+    font-size: 16px;
+    margin: 0px 0px 24px;
+    line-height: 1.5;
+}
+
+
+.sidebar{
+    width: 20%;
+    border: 2px solid #000;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar img{
+    margin: 0px 0px 10px;
+}
+
+@media(max-width:768px){
+    .main{
+        flex-direction: column;
+    }
+    .main div{
+        width: 100%;
+    }
+    .content{
+        margin-bottom: 20px;
+    }
+
+    .sidebar{
+        
+    }
+
+    .sidebar img{
+        width: 300px;
+        height: 255px;
+        margin: 0px 0px 10px;
+    }
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer p{
+    padding: 8px 0px;
+}
+
+
+
